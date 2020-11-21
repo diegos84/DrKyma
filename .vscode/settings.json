@@ -3,5 +3,8 @@
   "editor.wordWrap": "on",
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": false,
+  "cSpell.words": [
+    "spotify"
+  ],
 
 }

@@ -100,34 +100,34 @@ svg {
 @-webkit-keyframes fade-in-bounce {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.95) translateY(-3px);
+            transform: scale(0.95) translateY(-3px);
   }
   95% {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
+    -webkit-transform: scale(1.01) translateY(0px);
+            transform: scale(1.01) translateY(0px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
   }
 }
 
 @keyframes fade-in-bounce {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.95) translateY(-3px);
+            transform: scale(0.95) translateY(-3px);
   }
   95% {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
+    -webkit-transform: scale(1.01) translateY(0px);
+            transform: scale(1.01) translateY(0px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
   }
 }
 
@@ -253,18 +253,23 @@ svg {
   padding-top: 1rem;
 }
 
-.nav__fb, .nav__ig, .nav__yt {
+.nav__fb, .nav__ig, .nav__yt, .nav__spotify {
+  display: block;
   float: right;
+  margin: 4.1rem 2rem 1rem 0;
 }
 
-.nav__yt, .nav__ig, .nav__fb, .nav__img {
+.nav__yt, .nav__ig, .nav__fb, .nav__spotify, .nav__img {
   -webkit-animation: fade-in-bounce 1s 2.5s ease-in-out backwards;
           animation: fade-in-bounce 1s 2.5s ease-in-out backwards;
 }
 
 ion-icon {
-  margin: 4.1rem 2rem 1rem 0;
   color: whitesmoke;
   font-size: 5rem;
+}
+
+ion-icon:hover {
+  color: #04fab0;
 }
 /*# sourceMappingURL=main.css.map */
