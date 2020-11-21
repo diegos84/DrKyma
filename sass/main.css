@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #080808;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+}
+
+svg {
+  overflow: hidden;
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@-webkit-keyframes logo-zoom {
+  0% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  95% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes logo-zoom {
+  0% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  95% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  95% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade-in-bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  95% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes cabala {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes cabala {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes logo-hover {
+  0% {
+    -webkit-filter: drop-shadow(0, 0, 0);
+            filter: drop-shadow(0, 0, 0);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0.2, 0.4, 0.2);
+            filter: drop-shadow(0.2, 0.4, 0.2);
+  }
+}
+
+@keyframes logo-hover {
+  0% {
+    -webkit-filter: drop-shadow(0, 0, 0);
+            filter: drop-shadow(0, 0, 0);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0.2, 0.4, 0.2);
+            filter: drop-shadow(0.2, 0.4, 0.2);
+  }
+}
+
+.hero {
+  display: block;
+  background-image: linear-gradient(-230deg, rgba(253, 0, 54, 0.9) 0%, rgba(253, 0, 54, 0.9) 15%, rgba(4, 250, 176, 0.9) 85%, rgba(4, 250, 176, 0.9) 100%);
+  background-size: cover;
+  background-size: 330%;
+  animation: bg-animation 15s infinite alternate-reverse ease-in-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  height: 80vh;
+  overflow: hidden;
+}
+
+#logo {
+  -webkit-animation-name: logo-zoom;
+          animation-name: logo-zoom;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+#logo__circle--background:hover #logo {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+#logo__Y {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+#logo__Y:hover {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+#logo__cabala {
+  -webkit-animation-name: cabala;
+          animation-name: cabala;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  opacity: 0.1;
+}
+
+[id^="logo__dot--"] {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.nav {
+  margin-right: 5rem;
+}
+
+.nav__img {
+  display: inline-block;
+  margin: 1rem 0 0 7rem;
+  padding-top: 1rem;
+}
+
+.nav__fb, .nav__ig, .nav__yt {
+  float: right;
+}
+
+.nav__yt, .nav__ig, .nav__fb, .nav__img {
+  -webkit-animation: fade-in-bounce 1s 2.5s ease-in-out backwards;
+          animation: fade-in-bounce 1s 2.5s ease-in-out backwards;
+}
+
+ion-icon {
+  margin: 4.1rem 2rem 1rem 0;
+  color: whitesmoke;
+  font-size: 5rem;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin responsive-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin shadow {
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.6);
+}

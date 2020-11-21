@@ -1,0 +1,72 @@
+// ****** BACKGROUND ANIMATIONS *******
+@keyframes bg-animation {
+  0% { background-position: right;}
+  100% { background-position: left;}
+}
+
+
+
+// ******** LOGO ANIMATIONS ********
+
+@keyframes logo-zoom {
+  0% {
+    transform: scale(6);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  95% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  95% {
+    transform: scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cabala {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+
+
+
+// ******** HOVER ANIMATIONS ********
+
+@keyframes logo-hover {
+  0% {
+    filter: drop-shadow(0, 0, 0);
+  }
+  100% {
+    filter: drop-shadow(0.2, 0.4, 0.2);
+  }
+}

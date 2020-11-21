@@ -1,0 +1,49 @@
+#logo {
+  animation-name: logo-zoom;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in-out;
+
+  &__circle--background:hover & {
+    transform: translateX(20px);
+  }
+
+  &__Y {
+    animation-name: fade-in;
+    animation-duration: 2.5s;
+    animation-delay: 3.5s;
+    animation-fill-mode: backwards;
+    transition: all .5s ease-in-out;
+    &:hover {
+      fill: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+
+  &__cabala {
+    // animation: cabala 5s 5s infinite alternate;
+    animation-name: cabala;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 5s;
+    animation-fill-mode: backwards;
+    opacity: 0.1;
+  }
+
+}
+
+
+
+[id^="logo__dot--"] {
+  animation-name: fade-in;
+  animation-duration: 2.2s;
+  animation-delay: 2.5s;
+  animation-fill-mode: backwards;
+
+  // transition: all .4s ease-in-out;
+  // &:hover {
+  //   fill: rgba(0, 0, 0, 0.5);
+  // }
+}
+
+
+

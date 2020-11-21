@@ -1,0 +1,22 @@
+.hero {
+  // margin: 0 8rem 8rem;
+  display: block;
+  background-image: linear-gradient(
+    -230deg, 
+    rgba(#FD0036, .9) 0%,  
+    rgba(#FD0036, .9) 15%,  
+    rgba(#04fab0, .9) 85%,
+    rgba(#04fab0, .9) 100%,
+    );
+  background-size: cover;
+  background-size: 330%;
+  animation: bg-animation 15s infinite alternate-reverse ease-in-out;
+  align-items: center;
+  // border-radius: 30px;
+}
+
+.logo {
+  height: 80vh;
+  overflow: hidden;
+}
+
