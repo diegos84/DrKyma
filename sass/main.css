@@ -210,12 +210,12 @@ svg {
           animation-delay: 3.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
 
 #logo__Y:hover {
-  fill: rgba(0, 0, 0, 0.6);
+  fill: rgba(0, 0, 0, 0.5);
 }
 
 #logo__cabala {
@@ -267,9 +267,13 @@ svg {
 ion-icon {
   color: whitesmoke;
   font-size: 5rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 ion-icon:hover {
+  -webkit-transform: scale(1.03) translateY(-1px);
+          transform: scale(1.03) translateY(-1px);
   color: #04fab0;
 }
 /*# sourceMappingURL=main.css.map */

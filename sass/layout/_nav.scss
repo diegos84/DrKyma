@@ -23,7 +23,9 @@
 ion-icon {
   color: whitesmoke;
   font-size: 5rem;
+  transition: all .3s ease-in-out;
   &:hover {
+    transform: scale(1.03) translateY(-1px);
     color: #04fab0;
   }
 
