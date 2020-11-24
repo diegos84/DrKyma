@@ -7,14 +7,26 @@
 }
 
 html {
-  font-size: 62.5%; // 1rem = 10px
+  font-size: 62.5%; // 1rem = 10px (10/16=62.5%)
+
+  @include screen-size(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include screen-size(tab-port) {
+    font-size: 50%; // 1rem = 8px
+  }
+  @include screen-size(phone) {
+    font-size: 37.5%; // 1rem = 6px
+  }
+  @include screen-size(big-desktop) {
+    font-size: 75%; //1rem = 12px
+  }
 }
 
 body {
   background-color: #080808;
   box-sizing: border-box;
   overflow: hidden;
-  height: 100%;
 }
 
 svg {

@@ -1,3 +1,17 @@
+/* -------- MEDIA QUERY  MANAGER --------
+0 - 600px:      Mobile
+600 - 900px:    Tablet (portrait)
+900 - 1200px:   Tablet (landscape)
+1200 - 1800px:  Desktop (project is desktop-first, no query needed)
+1800px +:       Big desktop
+-------- $breakpoint argument choices --------
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -11,12 +25,35 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   background-color: #080808;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  height: 100%;
 }
 
 svg {
@@ -172,19 +209,31 @@ svg {
 }
 
 .hero {
-  display: block;
+  height: 90vh;
+  width: 100vw;
+  position: relative;
   background-image: linear-gradient(-230deg, rgba(253, 0, 54, 0.9) 0%, rgba(253, 0, 54, 0.9) 15%, rgba(4, 250, 176, 0.9) 85%, rgba(4, 250, 176, 0.9) 100%);
   background-size: cover;
   background-size: 330%;
+  overflow: hidden;
   animation: bg-animation 15s infinite alternate-reverse ease-in-out;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .logo {
-  height: 80vh;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 #logo {
@@ -244,19 +293,29 @@ svg {
 }
 
 .nav {
-  margin-right: 5rem;
+  margin: 1.6rem 3rem;
+}
+
+.nav__band {
+  margin-top: 2rem;
+  display: inline-block;
+  max-width: 20rem;
+  height: 90%;
 }
 
 .nav__img {
-  display: inline-block;
-  margin: 1rem 0 0 7rem;
-  padding-top: 1rem;
+  width: 100%;
 }
 
 .nav__fb, .nav__ig, .nav__yt, .nav__spotify {
-  display: block;
   float: right;
-  margin: 4.1rem 2rem 1rem 0;
+  padding: 3rem 1.4rem;
+}
+
+.nav__fb::after, .nav__ig::after, .nav__yt::after, .nav__spotify::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .nav__yt, .nav__ig, .nav__fb, .nav__spotify, .nav__img {
@@ -266,7 +325,7 @@ svg {
 
 ion-icon {
   color: whitesmoke;
-  font-size: 5rem;
+  font-size: 4rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
